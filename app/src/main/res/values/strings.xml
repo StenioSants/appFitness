@@ -2,7 +2,7 @@
     <string name="app_name">Fitness Tracker</string>
     <string name="version">v2.3.1</string>
     <string name="user">Usuário</string>
-    <string name="email">Email</string>
+    <string name="email">  Email</string>
     <string name="password">**********</string>
     <string name="remember">Lembrar senha?</string>
     <string name="loguin">Entrar</string>
@@ -11,4 +11,5 @@
     <string name="senhaa">Senha</string>
     <string name="preEmail">example@gmail.com</string>
     <string name="cadatro">Cadastrar</string>
+    <string name="senh">HELLO</string>
 </resources>

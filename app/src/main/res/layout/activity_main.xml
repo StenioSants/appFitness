@@ -1,45 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D5D3D3">
 
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/dev"
-        android:src="@drawable/quimera"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="325dp"
+        android:background="#323030"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/version"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="end"
+            android:text="@string/version"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/quimera2" />
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="325dp"
+        android:background="#E2E2E3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="75dp"
+            android:text="@string/dev"
+            android:textColor="#535353"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="220dp"
         android:background="@drawable/bordas"
-        android:backgroundTint="@color/white"
+        android:elevation="5dp"
         android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
         <TextView
             style="@style/form"
@@ -49,10 +67,18 @@
             android:textStyle="bold" />
 
         <EditText
-            style="@style/form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
             android:autofillHints="@string/preEmail"
+            android:background="@drawable/custom_edit_text"
+            android:drawableEnd="@drawable/ic_baseline_how_to_reg_24"
             android:hint="@string/email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp" />
 
         <TextView
             style="@style/form"
@@ -62,10 +88,18 @@
             android:textStyle="bold" />
 
         <EditText
-            style="@style/form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
             android:autofillHints="@string/password"
+            android:background="@drawable/custom_edit_text"
+            android:drawableEnd="@android:drawable/ic_lock_idle_lock"
             android:hint="@string/password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp" />
 
         <RadioButton
             style="@style/form"
@@ -89,8 +123,8 @@
             android:textStyle="bold" />
 
         <TextView
-            style="@style/form"
             android:id="@+id/recuperar"
+            style="@style/form"
             android:text="@string/lembrarSenha"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -98,16 +132,5 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dev"
-        android:textColor="#535353"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
