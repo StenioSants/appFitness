@@ -5,33 +5,39 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
 class MainActivity : AppCompatActivity() {
 
 
-//    private lateinit var btnloguin: Button
-//    private lateinit var btncadastrar: TextView
-//    private lateinit var btnrecuperar: TextView
+    private lateinit var btnloguin: Button
+    private lateinit var btncadastrar: TextView
+    private lateinit var btnrecuperar: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        installSplashScreen()
+
         setContentView(R.layout.activity_main)
 
-//        btnloguin = findViewById(R.id.btn_loguin)
-//        btnloguin.setOnClickListener {
-//            val i = Intent(this, MainItem::class.java )
-//            startActivity(i)
-//        }
-//        btncadastrar = findViewById(R.id.cadastro)
-//        btncadastrar.setOnClickListener {
-//            val i = Intent(this, Casdatrar::class.java )
-//            startActivity(i)
-//        }
-//        btnrecuperar = findViewById(R.id.recuperar)
-//        btnrecuperar.setOnClickListener {
-//            val i = Intent(this, RecuperarSenha::class.java )
-//            startActivity(i)
-//        }
+
+
+        btnloguin = findViewById(R.id.btn_loguin)
+        btnloguin.setOnClickListener {
+            val i = Intent(this, MainItem::class.java )
+            startActivity(i)
+        }
+        btncadastrar = findViewById(R.id.cadastro)
+        btncadastrar.setOnClickListener {
+            val i = Intent(this, Casdatrar::class.java )
+            startActivity(i)
+        }
+        btnrecuperar = findViewById(R.id.recuperar)
+        btnrecuperar.setOnClickListener {
+            val i = Intent(this, RecuperarSenha::class.java )
+            startActivity(i)
+        }
 
 
     }
